@@ -24,14 +24,51 @@ import {
 } from "lucide-react";
 
 const ASSETS = {
-  hero: "/manus-storage/8IQHGHMAT5uJ_a7d0c54f.jpg",
-  olive: "/manus-storage/z1Da7Bcxumsn_91dbba89.jpg",
-  dining: "/manus-storage/1w15ihp4Yj8I_533cbefe.jpg",
-  diningTall: "/manus-storage/0CIpEg10u1yl_57f1a9a3.jpg",
-  lounge: "/manus-storage/MOcfsACrtM37_3961b8fd.jpg",
-  bright: "/manus-storage/pLCaR3esj77j_e663c247.jpg",
-  chairs: "/manus-storage/Pn4zjBY2TLEN_ce9f2ea2.jpg",
+  logo: "/manus-storage/616798804_122122476939038671_2435136662805035932_n_3df010e4.jpg",
+  hero: "/manus-storage/631130976_122107438281228072_2929487005396729244_n_6bb14aaa.jpg",
+  workshop: "/manus-storage/641536516_122110652655228072_3247255752726411208_n_d6707d92.jpg",
+  archiveCabinet: "/manus-storage/630334235_122107437363228072_6681935704369032981_n_b00e3aae.jpg",
+  officeCabinet: "/manus-storage/631281474_122107437171228072_7289616588484690066_n_029109fa.jpg",
+  metalCabinet: "/manus-storage/631754058_122107436811228072_7128036552550874492_n_88b5f277.jpg",
+  rack: "/manus-storage/780032442_122131692351228072_7134767812800741505_n_8e79119e.jpg",
+  banner: "/manus-storage/616339857_122122479393038671_326589174609038313_n_12832cd5.jpg",
 };
+
+const REAL_GALLERY = [
+  { image: "/manus-storage/616339857_122122479393038671_326589174609038313_n_12832cd5.jpg", alt: "Banner da AFFIANCE.LDA sobre design de interiores e móveis decorativos" },
+  { image: "/manus-storage/616798804_122122476939038671_2435136662805035932_n_3df010e4.jpg", alt: "Assinatura gráfica oficial da AFFIANCE.LDA com poltrona, luminária e estrelas" },
+  { image: "/manus-storage/630334235_122107437363228072_6681935704369032981_n_b00e3aae.jpg", alt: "Arquivador metálico preto com gavetas abertas para organização de documentos" },
+  { image: "/manus-storage/631130976_122107438281228072_2929487005396729244_n_6bb14aaa.jpg", alt: "Família utilizando sofá modular cinza entregue pela AFFIANCE.LDA" },
+  { image: "/manus-storage/631281474_122107437171228072_7289616588484690066_n_029109fa.jpg", alt: "Armário misto de escritório com gavetas e compartimentos para documentos" },
+  { image: "/manus-storage/631754058_122107436811228072_7128036552550874492_n_88b5f277.jpg", alt: "Armário metálico cinza com portas e prateleiras internas" },
+  { image: "/manus-storage/641536516_122110652655228072_3247255752726411208_n_d6707d92.jpg", alt: "Profissional medindo um sofá durante a execução por medida em oficina" },
+  { image: "/manus-storage/642205525_122110652751228072_2083614274345739009_n_02954b59.jpg", alt: "Pessoa apontando para cadeiras de madeira estofadas numa publicação de carpintaria" },
+  { image: "/manus-storage/642364299_122110831653228072_8836883967074410069_n_59783495.jpg", alt: "Mesa de escritório, cadeiras e armários instalados num ambiente corporativo" },
+  { image: "/manus-storage/642450113_122110831779228072_3613089676735464248_n_5e09c48a.jpg", alt: "Mobiliário escolar embalado durante entrega e instalação pela AFFIANCE.LDA" },
+  { image: "/manus-storage/642735989_122110831695228072_6718920247871812443_n_e3ae55c4.jpg", alt: "Mesa de escritório em madeira com cadeira executiva e cadeiras de visitante" },
+  { image: "/manus-storage/643450584_122110652697228072_2734228199796072149_n_a88969bb.jpg", alt: "Profissionais montando estrutura acolchoada de sofá numa oficina" },
+  { image: "/manus-storage/645034467_122110831737228072_5794815760867785110_n_1d5fe08f.jpg", alt: "Mesa de reunião, cadeiras embaladas e ferramentas durante montagem de escritório" },
+  { image: "/manus-storage/645197805_122111209941228072_3351207859127331990_n_bde6831e.jpg", alt: "Mesas de escritório, poltronas embaladas e conjunto de sofá preparado para entrega" },
+  { image: "/manus-storage/646017510_122111621697228072_4032458578549105718_n_284a8b9d.jpg", alt: "Mesa de centro personalizada com tampo claro e base de madeira escura" },
+  { image: "/manus-storage/646282005_122111209803228072_9036572012009459005_n_76d2cc7f.jpg", alt: "Mobiliário embalado numa viatura durante entrega para a Conservatória da Matola" },
+  { image: "/manus-storage/646420823_122111209857228072_2863563286379808258_n_326c9f7d.jpg", alt: "Conjunto de mesa de escritório e cadeiras pretas preparado num ambiente de trabalho" },
+  { image: "/manus-storage/646447792_122111209899228072_4240485914626045646_n_d1640c27.jpg", alt: "Sofá e mesa de centro embalados sobrepostos a um ambiente de escritório personalizado" },
+  { image: "/manus-storage/648195172_122111621973228072_6626523842911576352_n_b171a555.jpg", alt: "Ambiente planeado com sofá claro, mesa de centro e painel de televisão" },
+  { image: "/manus-storage/648199989_122111730159228072_4642192696775316461_n_a164a0f3.jpg", alt: "Profissional de limpeza com equipamentos e produtos de limpeza num espaço de atendimento" },
+  { image: "/manus-storage/702307096_122122170165228072_2901713324594261703_n_0d653f9f.jpg", alt: "Sofá claro personalizado apresentado sobre base circular iluminada" },
+  { image: "/manus-storage/702325042_122122350381228072_6929319721474163864_n_5faf0dbd.jpg", alt: "Sofá castanho de seis lugares com dois pufes e mesa de centro dourada" },
+  { image: "/manus-storage/702546094_122122350339228072_8748250403460581753_n_c89db070.jpg", alt: "Jogo de sofá em napa com sete lugares, cama e copeiro" },
+  { image: "/manus-storage/780032442_122131692351228072_7134767812800741505_n_8e79119e.jpg", alt: "Rack preto para sala com detalhes dourados sobre fundo de madeira" },
+  { image: "/manus-storage/780456747_122131692363228072_2465420215581447521_n_b030c27b.jpg", alt: "Rack branco de três gavetas para sala sobre fundo de madeira" },
+  { image: "/manus-storage/781137444_122131692339228072_882238959140237222_n_ad298148.jpg", alt: "Rack branco com portas de vidro arqueado e pés dourados" },
+  { image: "/manus-storage/784433159_122131985961228072_700624867441075710_n_14c57720.jpg", alt: "Cadeira dourada para ornamentação com assento branco" },
+  { image: "/manus-storage/784928615_122131985985228072_4073236902438887576_n_7b20f8ca.jpg", alt: "Cadeira azul estofada para mesa de jantar" },
+  { image: "/manus-storage/785258192_122131985967228072_9050566411137331413_n_fe4e78cf.jpg", alt: "Cadeira de madeira clara com assento estofado para mesa de jantar" },
+] as const;
+
+const CURATED_GALLERY = [
+  REAL_GALLERY[0], REAL_GALLERY[2], REAL_GALLERY[3], REAL_GALLERY[4], REAL_GALLERY[5], REAL_GALLERY[6], REAL_GALLERY[23], REAL_GALLERY[1],
+] as const;
 
 type Product = {
   id: string;
@@ -43,19 +80,19 @@ type Product = {
 };
 
 const products: Product[] = [
-  { id: "cadeira-orla", name: "Cadeira Orla", category: "Cadeiras", description: "Linhas esculpidas e presença serena para a mesa de jantar.", tag: "Novo", image: ASSETS.chairs },
-  { id: "rack-elegance", name: "Rack Elegance", category: "Sala de estar", description: "Volume minimalista pensado para valorizar o ambiente.", tag: "Em destaque", image: ASSETS.hero },
-  { id: "sofa-nova", name: "Sofá Nova", category: "Sofás", description: "Conforto generoso, tecido selecionado e composição personalizável.", image: ASSETS.lounge },
-  { id: "mesa-terra", name: "Mesa Terra", category: "Mesas", description: "Uma peça central para encontros que merecem tempo e atenção.", image: ASSETS.diningTall },
+  { id: "arquivador-metalico", name: "Arquivador Metálico", category: "Organização corporativa", description: "Solução de arquivo em metal, eficiente e durável para o seu escritório.", tag: "Disponível", image: ASSETS.archiveCabinet },
+  { id: "rack-sala", name: "Rack para sala", category: "Sala de estar", description: "Rack preto com detalhes dourados para uma composição de sala elegante.", tag: "Em destaque", image: ASSETS.rack },
+  { id: "sofa-modular", name: "Sofá modular", category: "Sofás", description: "Solução confortável produzida para acompanhar a rotina da sua família.", image: ASSETS.hero },
+  { id: "armario-misto", name: "Armário misto", category: "Mobiliário corporativo", description: "Organização segura para documentos e materiais de trabalho.", image: ASSETS.officeCabinet },
 ];
 
 const categories = [
-  { name: "Sofás", image: ASSETS.lounge },
-  { name: "Racks", image: ASSETS.hero },
-  { name: "Cadeiras", image: ASSETS.chairs },
-  { name: "Mesas", image: ASSETS.dining },
-  { name: "Salas de estar", image: ASSETS.olive },
-  { name: "Decoração", image: ASSETS.bright },
+  { name: "Sofás", image: ASSETS.hero, alt: "Família utilizando sofá modular cinza entregue pela AFFIANCE.LDA" },
+  { name: "Racks", image: ASSETS.rack, alt: "Rack preto para sala com detalhes dourados" },
+  { name: "Arquivadores", image: ASSETS.archiveCabinet, alt: "Arquivador metálico preto para organização de documentos" },
+  { name: "Armários", image: ASSETS.metalCabinet, alt: "Armário metálico cinza com portas e prateleiras" },
+  { name: "Por medida", image: ASSETS.workshop, alt: "Profissional medindo um sofá durante a execução por medida" },
+  { name: "Interiores", image: ASSETS.banner, alt: "Banner sobre design de interiores e móveis decorativos da AFFIANCE.LDA" },
 ];
 
 const navItems = [
@@ -74,6 +111,7 @@ export default function Home() {
   const [favorites, setFavorites] = useState<string[]>([]);
   const [cart, setCart] = useState<string[]>([]);
   const [comparison, setComparison] = useState(62);
+  const [showFullGallery, setShowFullGallery] = useState(false);
   const [modal, setModal] = useState<"quote" | "project" | "customization" | "product" | "menu" | null>(null);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const toggleFavorite = (id: string) => {
@@ -91,7 +129,7 @@ export default function Home() {
   };
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/?text=Olá%20AFFIANCE.LDA%2C%20gostaria%20de%20falar%20sobre%20um%20projeto.", "_blank", "noopener,noreferrer");
+    window.open("https://wa.me/258864662530?text=Olá%20AFFIANCE.LDA%2C%20gostaria%20de%20falar%20sobre%20um%20projeto.", "_blank", "noopener,noreferrer");
   };
 
   const submitForm = (event: React.FormEvent<HTMLFormElement>, message: string, kind: LeadKind) => {
@@ -115,7 +153,7 @@ export default function Home() {
       <header className="header">
         <div className="site-container header-inner">
           <a href="#inicio" className="brand" aria-label="AFFIANCE.LDA, ir para início">
-            <span className="brand-mark" aria-hidden="true">A</span><span className="brand-copy"><span className="brand-wordmark">AFFIANCE.LDA</span><span className="brand-sub">INTERIORES &amp; MOBILIÁRIO</span></span>
+            <span className="brand-mark" aria-hidden="true"><img src={ASSETS.logo} alt="" /></span><span className="brand-copy"><span className="brand-wordmark">AFFIANCE.LDA</span><span className="brand-sub">DESIGN DE INTERIOR &amp; LIMPEZA</span></span>
           </a>
           <nav className="desktop-nav" aria-label="Navegação principal">
             {navItems.map(([label, target]) => <a href={target} key={target}>{label}</a>)}
@@ -165,7 +203,7 @@ export default function Home() {
       <section className="site-container category-section" id="mobiliario">
         <div className="section-header"><div><p className="kicker">Coleções selecionadas</p><h2 className="section-title">Encontre o que combina com o seu <em>espaço.</em></h2></div><button className="text-link" onClick={() => toast.info("As coleções podem ser exploradas durante a consultoria AFFIANCE.")}>Ver todas as coleções <ArrowRight size={16} /></button></div>
         <div className="category-grid">
-          {categories.map((category) => <a href="#pecas" className="category-card" key={category.name}><img src={category.image} alt={`Ambiente com ${category.name.toLowerCase()}`} /><div className="category-card-content"><h3>{category.name}</h3><span><ArrowDownRight size={17} /></span></div></a>)}
+          {categories.map((category) => <a href="#pecas" className="category-card" key={category.name}><img src={category.image} alt={category.alt} /><div className="category-card-content"><h3>{category.name}</h3><span><ArrowDownRight size={17} /></span></div></a>)}
         </div>
       </section>
 
@@ -183,8 +221,8 @@ export default function Home() {
       </section>
 
       <section className="feature-product">
-        <div className="feature-product-media"><img src={ASSETS.hero} alt="Rack Elegance integrado numa sala sofisticada" /></div>
-        <div className="feature-product-copy"><p className="kicker">Peça em destaque</p><h2>Rack<br /><em>Elegance</em></h2><p>Design que valoriza a sua sala. Uma composição de linhas contínuas, armazenamento discreto e acabamentos escolhidos para dialogar com a arquitetura.</p><div className="specs"><div><span>Materiais</span><strong>Madeira, metal e laca</strong></div><div><span>Configuração</span><strong>Medidas personalizáveis</strong></div><div><span>Acabamentos</span><strong>Seleção sob consulta</strong></div><div><span>Disponibilidade</span><strong>Por encomenda</strong></div></div><div className="hero-buttons"><button className="sand-button" onClick={() => addToCart(products[1])}>Adicionar à seleção <ShoppingBag size={16} /></button><button className="outline-button" onClick={() => setModal("quote")}>Solicitar orçamento</button></div></div>
+        <div className="feature-product-media"><img src={ASSETS.rack} alt="Rack preto para sala com detalhes dourados" /></div>
+        <div className="feature-product-copy"><p className="kicker">Peça em destaque</p><h2>Rack<br /><em>para sala</em></h2><p>Uma peça preta com detalhes dourados, criada para dar presença e organização à sua sala de estar.</p><div className="specs"><div><span>Acabamento</span><strong>Preto com detalhes dourados</strong></div><div><span>Indicado para</span><strong>Sala de estar</strong></div><div><span>Preço informado</span><strong>12.000 Mt</strong></div><div><span>Disponibilidade</span><strong>Consulte a equipa</strong></div></div><div className="hero-buttons"><button className="sand-button" onClick={() => addToCart(products[1])}>Adicionar à seleção <ShoppingBag size={16} /></button><button className="outline-button" onClick={() => setModal("quote")}>Solicitar orçamento</button></div></div>
       </section>
 
       <section className="site-container services" id="servicos">
@@ -194,37 +232,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="design-banner"><img src={ASSETS.olive} alt="Ambiente de interiores com parede verde-oliva" /><div className="site-container design-banner-content"><p className="kicker">Design de interiores</p><h2>O seu espaço merece <em>mais.</em></h2><p>Criamos projetos de interiores personalizados para transformar cada ambiente num lugar elegante, funcional e genuinamente seu.</p><button className="sand-button" onClick={() => setModal("project")}>Solicitar projeto <ArrowRight size={16} /></button></div></section>
+      <section className="design-banner"><img src={ASSETS.workshop} alt="Execução de sofá personalizado pela AFFIANCE.LDA" /><div className="site-container design-banner-content"><p className="kicker">Design de interiores</p><h2>O seu espaço merece <em>mais.</em></h2><p>Da ideia à execução, criamos soluções de interiores e mobiliário que respondem ao seu modo de viver.</p><button className="sand-button" onClick={() => setModal("project")}>Solicitar projeto <ArrowRight size={16} /></button></div></section>
 
       <section className="site-container projects" id="projetos">
         <div className="projects-head"><div><p className="kicker">Portfólio</p><h2 className="section-title">Projetos que <em>inspiram.</em></h2></div><p className="section-copy">Uma seleção de ambientes pensados com rigor de composição, materialidade e uma relação natural entre a casa e quem a habita.</p></div>
         <div className="project-grid">
-          {[{name: "Casa Matola", kind: "Sala de estar", image: ASSETS.hero}, {name: "Residência Nacala", kind: "Sala de jantar", image: ASSETS.dining}, {name: "Estúdio Baía", kind: "Ambiente de trabalho", image: ASSETS.olive}].map((project) => <article className="project-card" key={project.name}><img src={project.image} alt={project.name} /><div className="project-meta"><div><span>{project.kind}</span><h3>{project.name}</h3></div><button onClick={() => toast.info(`O projeto ${project.name} será apresentado durante a reunião de inspiração.`)} aria-label={`Ver ${project.name}`}><ArrowRight size={16} /></button></div></article>)}
+          {[{name: "Sofá modular entregue", kind: "Mobiliário residencial", image: ASSETS.hero}, {name: "Produção por medida", kind: "Execução em oficina", image: ASSETS.workshop}, {name: "Organização corporativa", kind: "Mobiliário de escritório", image: ASSETS.officeCabinet}].map((project) => <article className="project-card" key={project.name}><img src={project.image} alt={project.name} /><div className="project-meta"><div><span>{project.kind}</span><h3>{project.name}</h3></div><button onClick={() => toast.info(`O projeto ${project.name} será apresentado durante a reunião de inspiração.`)} aria-label={`Ver ${project.name}`}><ArrowRight size={16} /></button></div></article>)}
         </div>
       </section>
 
+      <section className="site-container real-gallery" aria-label="Acervo real AFFIANCE.LDA">
+        <div className="section-header"><div><p className="kicker">Acervo real</p><h2 className="section-title">Mobiliário, execução e projetos da <em>Affiance.</em></h2></div><p className="section-copy" style={{maxWidth: "330px", margin: 0}}>Uma curadoria de trabalhos e publicações reais fornecidos pela própria AFFIANCE.LDA.</p></div>
+        <div className="real-gallery-grid">{(showFullGallery ? REAL_GALLERY : CURATED_GALLERY).map((item, index) => <figure className="real-gallery-card" key={item.image}><img src={item.image} loading="lazy" alt={item.alt} /><figcaption>Acervo AFFIANCE.LDA <span>/{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div>
+        <div className="real-gallery-toggle"><button className="olive-button" onClick={() => setShowFullGallery((current) => !current)}>{showFullGallery ? "Ver seleção editorial" : `Explorar todas as ${REAL_GALLERY.length} publicações`} <ArrowRight size={16} /></button></div>
+      </section>
+
       <section className="transformation">
-        <div className="transformation-copy"><p className="kicker">Antes &amp; depois</p><h2>Veja a <em>transformação.</em></h2><p>Deslize o controlo e compare a atmosfera de um ambiente antes e depois de uma intervenção de interiores orientada à luz, conforto e funcionalidade.</p></div>
-        <div className="comparison" style={{"--comparison": `${comparison}%`} as React.CSSProperties}><img className="comparison-before" src={ASSETS.bright} alt="Ambiente antes da transformação" /><div className="comparison-after-wrap"><img src={ASSETS.olive} alt="Ambiente depois da transformação" /></div><span className="comparison-label after">Depois</span><span className="comparison-label before">Antes</span><span className="comparison-handle"><ChevronLeft size={13}/><ChevronRight size={13}/></span><input className="comparison-range" type="range" min="5" max="95" value={comparison} onChange={(event) => setComparison(Number(event.target.value))} aria-label="Comparar antes e depois" /></div>
+        <div className="transformation-copy"><p className="kicker">Do processo à entrega</p><h2>Veja a nossa <em>execução.</em></h2><p>Deslize o controlo para descobrir a passagem entre a produção por medida e uma peça pronta a ser vivida em casa.</p></div>
+        <div className="comparison" style={{"--comparison": `${comparison}%`} as React.CSSProperties}><img className="comparison-before" src={ASSETS.workshop} alt="Sofá em processo de execução" /><div className="comparison-after-wrap"><img src={ASSETS.hero} alt="Sofá modular entregue e em uso" /></div><span className="comparison-label after">Entregue</span><span className="comparison-label before">Em execução</span><span className="comparison-handle"><ChevronLeft size={13}/><ChevronRight size={13}/></span><input className="comparison-range" type="range" min="5" max="95" value={comparison} onChange={(event) => setComparison(Number(event.target.value))} aria-label="Comparar processo e entrega" /></div>
       </section>
 
       <section className="site-container customization">
         <div><p className="kicker">Personalização</p><h2 className="section-title">O seu ambiente. O seu <em>estilo.</em></h2><p className="section-copy">Escolha os detalhes que tornam cada peça verdadeiramente sua. Trabalhamos com cores, tecidos, materiais e acabamentos para construir soluções alinhadas ao seu espaço.</p><div className="finishes"><div className="finish"><i style={{background: "#5a4432"}} /><span>Nogueira</span></div><div className="finish"><i style={{background: "#707b61"}} /><span>Oliva</span></div><div className="finish"><i style={{background: "#d2c1a4"}} /><span>Linho</span></div><div className="finish"><i style={{background: "#a9804d"}} /><span>Bronze</span></div></div><button className="olive-button" onClick={() => setModal("customization")}>Personalizar mobiliário <ArrowRight size={16} /></button></div>
-        <div className="customization-visual"><img src={ASSETS.diningTall} alt="Detalhe de uma sala de jantar com materiais sofisticados" /><div className="material-card"><span>Matéria &amp; textura</span><p>Acabamentos que ganham carácter com o tempo.</p></div></div>
+        <div className="customization-visual"><img src={ASSETS.workshop} alt="Processo de medição de sofá personalizado" /><div className="material-card"><span>Matéria &amp; textura</span><p>Acabamentos que ganham carácter com o tempo.</p></div></div>
       </section>
 
-      <section className="site-container lifestyle"><div><p className="kicker">Lifestyle</p><h2 className="section-title">Espaços feitos para <em>viver.</em></h2><p className="section-copy" style={{maxWidth: "560px"}}>Mais do que decorar, criamos ambientes para serem vividos, partilhados e lembrados.</p></div><div className="lifestyle-grid"><figure><img src={ASSETS.lounge} alt="Sala confortável pensada para momentos de pausa" /><figcaption>O descanso, em boa companhia.</figcaption></figure><figure><img src={ASSETS.diningTall} alt="Sala de jantar elegante para receber" /><figcaption>O prazer de receber.</figcaption></figure></div></section>
+      <section className="site-container lifestyle"><div><p className="kicker">Lifestyle</p><h2 className="section-title">Espaços feitos para <em>viver.</em></h2><p className="section-copy" style={{maxWidth: "560px"}}>Mais do que decorar, criamos ambientes para serem vividos, partilhados e lembrados.</p></div><div className="lifestyle-grid"><figure><img src={ASSETS.hero} alt="Sofá modular integrado na rotina de uma família" /><figcaption>O descanso, em boa companhia.</figcaption></figure><figure><img src={ASSETS.rack} alt="Rack preto com detalhes dourados para sala" /><figcaption>Peças que compõem a sua sala.</figcaption></figure></div></section>
 
       <section className="process"><div className="site-container"><p className="kicker">Método Affiance</p><h2 className="section-title">Clareza em cada passo do <em>processo.</em></h2><div className="process-grid">{[["01", "Escuta", "Começamos por compreender os seus hábitos, prioridades e referências."], ["02", "Direção", "Traduzimos a visão num conceito de interiores coerente e pessoal."], ["03", "Seleção", "Definimos peças, materiais e acabamentos com rigor de composição."], ["04", "Realização", "Acompanhamos cada decisão até ao ambiente ganhar forma."]].map(([number, title, text]) => <article className="process-step" key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
       <section className="site-container contact" id="contactos">
-        <div className="contact-copy"><p className="kicker">Vamos conversar</p><h2 className="section-title">Fale com a <em>Affiance.</em></h2><p>Conte-nos o que imagina. A nossa equipa entra em contacto para perceber o seu espaço e indicar o melhor ponto de partida.</p><div className="contact-details"><div className="contact-detail"><MessageCircle size={16} /><button className="text-link" onClick={openWhatsApp}>Falar pelo WhatsApp <ArrowRight size={15} /></button></div><div className="contact-detail"><Mail size={16} /><span>Atendimento personalizado por marcação</span></div></div></div>
+        <div className="contact-copy"><p className="kicker">Vamos conversar</p><h2 className="section-title">Fale com a <em>Affiance.</em></h2><p>Conte-nos o que imagina. A nossa equipa entra em contacto para perceber o seu espaço e indicar o melhor ponto de partida.</p><div className="contact-details"><div className="contact-detail"><MessageCircle size={16} /><button className="text-link" onClick={openWhatsApp}>+258 86 4662 530 <ArrowRight size={15} /></button></div><div className="contact-detail"><Mail size={16} /><span>affiance.lda@gmail.com</span></div></div></div>
         <form className="contact-form" onSubmit={(event) => submitForm(event, "Recebemos o seu pedido. A AFFIANCE.LDA entrará em contacto em breve.", "contact")}><div className="form-grid"><div className="form-field"><label htmlFor="name">Nome</label><input id="name" required placeholder="Como podemos chamar-lhe?" /></div><div className="form-field"><label htmlFor="phone">Telefone</label><input id="phone" required placeholder="O seu contacto" /></div><div className="form-field"><label htmlFor="email">E-mail</label><input id="email" type="email" required placeholder="nome@email.com" /></div><div className="form-field"><label htmlFor="type">Tipo de projeto</label><select id="type" defaultValue=""><option value="" disabled>Selecione uma opção</option><option>Design de interiores</option><option>Mobiliário personalizado</option><option>Consultoria</option><option>Limpeza</option></select></div><div className="form-field full"><label htmlFor="message">Mensagem</label><textarea id="message" required placeholder="Partilhe um pouco sobre o seu espaço, referências e necessidades." /></div></div><button className="olive-button form-submit" type="submit">Enviar pedido <ArrowRight size={16} /></button></form>
       </section>
 
       <section className="newsletter"><div className="site-container newsletter-grid"><div><p className="kicker">Notas Affiance</p><h2>Inspire-se. Transforme. <em>Viva melhor.</em></h2></div><form onSubmit={(event) => submitForm(event, "Obrigado por se juntar às notas AFFIANCE.LDA.", "newsletter")}><input id="newsletter-email" type="email" required aria-label="O seu melhor e-mail" placeholder="Digite o seu melhor e-mail" /><button type="submit">Quero receber <ArrowRight size={16} /></button></form></div></section>
 
-      <footer className="footer"><div className="site-container"><div className="footer-grid"><div className="footer-brand"><a href="#inicio" className="brand"><span className="brand-mark" aria-hidden="true">A</span><span className="brand-copy"><span className="brand-wordmark">AFFIANCE.LDA</span><span className="brand-sub">INTERIORES &amp; MOBILIÁRIO</span></span></a><p>Design de interiores que transforma espaços em experiências pessoais.</p></div><div className="footer-col"><h3>Mobiliário</h3><a href="#mobiliario">Sofás</a><a href="#mobiliario">Racks</a><a href="#mobiliario">Cadeiras</a><a href="#mobiliario">Mesas</a></div><div className="footer-col"><h3>Serviços</h3><a href="#servicos">Interiores</a><a href="#servicos">Consultoria</a><a href="#projetos">Projetos</a><a href="#interiores">Personalização</a></div><div className="footer-col"><h3>Institucional</h3><a href="#interiores">Sobre nós</a><a href="#projetos">Portfólio</a><a href="#contactos">Contactos</a><a href="#contactos">Privacidade</a></div><div className="footer-col"><h3>Atendimento</h3><a href="#contactos">Solicitar orçamento</a><button onClick={openWhatsApp} className="text-link" style={{color: "#c7c1b3", fontSize: ".78rem", fontWeight: 400}}>WhatsApp</button><a href="#contactos">Falar connosco</a><a href="#contactos">Visitas por marcação</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} AFFIANCE.LDA. Todos os direitos reservados.</span><span><Instagram size={12} style={{display: "inline", verticalAlign: "middle"}} /> Instagram &nbsp; · &nbsp; Moçambique</span></div></div></footer>
+      <footer className="footer"><div className="site-container"><div className="footer-grid"><div className="footer-brand"><a href="#inicio" className="brand"><span className="brand-mark" aria-hidden="true"><img src={ASSETS.logo} alt="" /></span><span className="brand-copy"><span className="brand-wordmark">AFFIANCE.LDA</span><span className="brand-sub">DESIGN DE INTERIOR &amp; LIMPEZA</span></span></a><p>Design de interiores, mobiliário e limpeza para espaços que acompanham a sua vida.</p></div><div className="footer-col"><h3>Mobiliário</h3><a href="#mobiliario">Sofás</a><a href="#mobiliario">Racks</a><a href="#mobiliario">Arquivadores</a><a href="#mobiliario">Armários</a></div><div className="footer-col"><h3>Serviços</h3><a href="#servicos">Interiores</a><a href="#servicos">Consultoria</a><a href="#projetos">Projetos</a><a href="#interiores">Personalização</a></div><div className="footer-col"><h3>Institucional</h3><a href="#interiores">Sobre nós</a><a href="#projetos">Portfólio</a><a href="#contactos">Contactos</a><a href="#contactos">Privacidade</a></div><div className="footer-col"><h3>Atendimento</h3><a href="#contactos">Solicitar orçamento</a><button onClick={openWhatsApp} className="text-link" style={{color: "#c7c1b3", fontSize: ".78rem", fontWeight: 400}}>WhatsApp</button><a href="mailto:affiance.lda@gmail.com">affiance.lda@gmail.com</a><a href="#contactos">Av. de Moçambique, Bagamoyo</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} AFFIANCE.LDA. Todos os direitos reservados.</span><span><Instagram size={12} style={{display: "inline", verticalAlign: "middle"}} /> Instagram &nbsp; · &nbsp; Maputo, Moçambique</span></div></div></footer>
 
       <button className="floating-whatsapp" onClick={openWhatsApp} aria-label="Falar pelo WhatsApp"><MessageCircle size={18} /><span>Falar pelo WhatsApp</span></button>
 

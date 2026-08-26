@@ -20,3 +20,10 @@
 - [x] Reforçar a apresentação de produtos com contrastes escuros, molduras editoriais e detalhes dourados inspirados nas publicações.
 - [x] Validar a identidade atualizada em desktop e celular.
 - [x] Documentar os elementos observáveis das referências sociais e a respetiva tradução na identidade do site.
+- [x] Organizar as fotografias reais fornecidas e disponibilizá-las no armazenamento do projeto.
+- [x] Substituir imagens de referência por fotografias reais no hero, nas categorias, nas peças em destaque e no portfólio.
+- [x] Ajustar os enquadramentos e validar a apresentação do acervo real em desktop e celular.
+- [x] Transformar a galeria de acervo real em uma seleção editorial expansível, preservando o acesso a todas as fotografias enviadas.
+- [x] Corrigir a coerência entre imagens reais, nomes de produto, descrições e textos alternativos nas secções atualizadas.
+- [x] Revisar a coerência entre imagem, título, descrição e texto alternativo nas categorias, banner, lifestyle, portfólio e galeria real.
+- [x] Criar descrições alternativas específicas para todas as fotografias exibidas na galeria expandida.
