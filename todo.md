@@ -16,3 +16,7 @@
 - [x] Adicionar validação automatizada dos dados obrigatórios para pedidos de orçamento, projeto, contacto e newsletter.
 - [x] Cobrir os fluxos de orçamento e projeto, incluindo validação e submissão bem-sucedida, com testes automatizados.
 - [x] Cobrir cenários de sucesso e validação dos fluxos de newsletter e personalização com testes automatizados.
+- [x] Ajustar a paleta, a marca gráfica e a composição visual com base nas referências das redes sociais da AFFIANCE.LDA.
+- [x] Reforçar a apresentação de produtos com contrastes escuros, molduras editoriais e detalhes dourados inspirados nas publicações.
+- [x] Validar a identidade atualizada em desktop e celular.
+- [x] Documentar os elementos observáveis das referências sociais e a respetiva tradução na identidade do site.
