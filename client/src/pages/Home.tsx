@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { type LeadKind } from "../../../shared/affianceForms";
-import { processLeadSubmission } from "../../../shared/affianceSubmission";
-import { addUniqueToSelection, toggleSelection } from "../../../shared/affianceSelection";
 import { toast } from "sonner";
+import { addToLocalSelection, processLocalSubmission, toggleLocalSelection, type LeadKind } from "@/lib/localInteractions";
 import {
   ArrowDownRight,
   ArrowRight,
@@ -122,11 +120,11 @@ export default function Home() {
   const [modal, setModal] = useState<"quote" | "project" | "customization" | "product" | "menu" | null>(null);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const toggleFavorite = (id: string) => {
-    setFavorites((current) => toggleSelection(current, id));
+    setFavorites((current) => toggleLocalSelection(current, id));
   };
 
   const addToCart = (product: Product) => {
-    setCart((current) => addUniqueToSelection(current, product.id));
+    setCart((current) => addToLocalSelection(current, product.id));
     toast.success(`${product.name} foi adicionado à sua seleção.`);
   };
 
@@ -144,7 +142,7 @@ export default function Home() {
     const values = Object.fromEntries(Array.from(event.currentTarget.elements)
       .filter((field) => "value" in field && Boolean(field.id))
       .map((field) => [field.id, String((field as HTMLInputElement).value)]));
-    const result = processLeadSubmission(kind, values);
+    const result = processLocalSubmission(kind, values);
     if (!result.accepted) {
       toast.error(result.message);
       return;

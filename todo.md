@@ -30,3 +30,9 @@
 - [x] Adicionar as cadeiras reais ao catálogo de produtos com fotografias, categorias e preços informados.
 - [x] Criar um destaque visual para cadeiras de decoração e cadeiras de jantar na coleção AFFIANCE.LDA.
 - [x] Validar a apresentação das cadeiras em desktop e celular.
+- [x] Remover da interface qualquer acesso ou dependência de autenticação, banco de dados e chamadas de servidor.
+- [x] Manter favoritos, seleção, formulários e catálogo como interações locais de front-end com feedback claro ao usuário.
+- [x] Validar a experiência exclusivamente de front-end em desktop e celular.
+- [x] Registrar a validação visual desktop após a remoção final de tRPC, OAuth e componentes auxiliares.
+- [x] Cobrir a validação local de formulários, favoritos e seleção com testes de front-end.
+- [x] Isolar componentes auxiliares não utilizados que possuem referências a autenticação ou tRPC para preservar a entrega front-end-only.
