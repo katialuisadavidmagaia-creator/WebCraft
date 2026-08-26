@@ -255,6 +255,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .contact-details { display: grid; gap: 1rem; margin-top: 2.7rem; }
 .contact-detail { display: flex; gap: .9rem; align-items: center; color: #4c5349; font-size: .84rem; }
 .contact-detail svg { color: #9b7a48; }
+.social-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.social-links a, .footer-social a { display: inline-flex; align-items: center; gap: .45rem; color: #4c5349; font-size: .8rem; font-weight: 600; text-decoration: none; }
+.social-links a:hover { color: #9b7a48; }
 .contact-form { padding: clamp(1.5rem, 4vw, 3rem); background: #e8dfd0; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; }
 .form-field { display: grid; gap: .5rem; }
@@ -283,6 +286,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-col a { display: block; margin: .6rem 0; color: #c7c1b3; font-size: .78rem; text-decoration: none; transition: color .18s ease; }
 .footer-col a:hover { color: white; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 1rem; margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.14); color: #979889; font: 9px "DM Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
+.footer-social { display: inline-flex; flex-wrap: wrap; gap: .9rem; }
+.footer-social a { color: #c7c1b3; }
+.footer-social a:hover { color: #fffefa; }
 
 .floating-whatsapp { position: fixed; z-index: 20; right: 24px; bottom: 24px; display: flex; align-items: center; gap: .65rem; padding: .78rem 1rem; border: 0; border-radius: 999px; background: #b79560; box-shadow: 0 12px 32px rgba(20,23,17,.25); color: #fffdf9; font-size: .75rem; font-weight: 600; transition: transform .18s ease, background .18s ease; }
 .floating-whatsapp:hover { background: #30392a; transform: translateY(-3px); }
@@ -324,9 +330,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .header-actions { gap: .2rem; }
   .menu-button { display: grid; }
   .header-actions .icon-button:nth-of-type(3) { display: grid; }
-  .hero { min-height: 720px; }
-  .hero-content { display: block; padding: 7rem 0 2.2rem; }
-  .hero h1 { font-size: clamp(3.65rem, 17vw, 5.7rem); }
+  .section-title { font-size: clamp(2.3rem, 10vw, 3.25rem); line-height: 1.02; letter-spacing: -.05em; }
+  .hero { min-height: 650px; }
+  .hero-content { display: block; padding: 4.8rem 0 2rem; }
+  .hero h1 { max-width: 340px; margin: 1rem 0 1.2rem; font-size: clamp(2.75rem, 12vw, 4rem); line-height: .94; letter-spacing: -.06em; }
+  .hero-lead { max-width: 330px; font-size: .96rem; line-height: 1.55; }
+  .hero-buttons { gap: .65rem; margin-top: 1.55rem; }
   .hero-side-note { display: none; }
   .trust-bar { grid-template-columns: 1fr; }
   .trust-item { padding: .8rem 0; }
@@ -353,6 +362,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .feature-product, .transformation, .customization { grid-template-columns: 1fr; }
   .feature-product-media, .comparison { min-height: 440px; }
   .feature-product-copy, .transformation-copy { padding: 3.5rem 16px; }
+  .feature-product h2, .transformation-copy h2, .design-banner h2, .newsletter h2 { font-size: clamp(2.25rem, 10vw, 3.35rem); line-height: .98; }
   .services-grid { grid-template-columns: 1fr; }
   .service + .service { border-top: 1px solid #d3c9b9; border-left: 0; }
   .service-icon { margin-bottom: 1.7rem; }
@@ -378,8 +388,25 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.3rem 1.4rem; }
   .footer-brand { grid-column: span 2; }
   .footer-bottom { display: block; margin-top: 3rem; line-height: 1.8; }
+  .footer-social { margin-top: .7rem; }
   .floating-whatsapp { right: 16px; bottom: 16px; padding: .75rem; }
   .floating-whatsapp span { display: none; }
+}
+
+@media (max-width: 420px) {
+  .site-container { width: min(100% - 28px, 1440px); }
+  .top-strip { font-size: 8px; letter-spacing: .06em; }
+  .brand-mark { width: 30px; height: 30px; }
+  .brand-wordmark { font-size: .9rem; letter-spacing: .12em; }
+  .hero { min-height: 605px; }
+  .hero-content { padding-top: 4.1rem; }
+  .hero h1 { font-size: clamp(2.55rem, 12vw, 3.2rem); }
+  .section-title { font-size: clamp(2.1rem, 9.7vw, 2.8rem); }
+  .intro, .services, .projects, .customization, .contact { padding: 4.5rem 0; }
+  .category-section, .lifestyle, .real-gallery { padding-bottom: 4.5rem; }
+  .collection, .chair-spotlight, .process { padding: 4.5rem 0; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-brand { grid-column: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {

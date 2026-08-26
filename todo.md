@@ -41,3 +41,16 @@
 - [x] Validar localmente o build de produção estático e as rotas antes da nova implantação.
 - [x] Substituir URLs internas de armazenamento por URLs públicas portáveis para que as fotografias funcionem fora da hospedagem Manus.
 - [x] Testar as rotas `/`, `/404` e uma rota arbitrária contra o preview estático após o build.
+- [x] Preparar documento comercial com o escopo e as entregas realizadas na Fase 1.
+- [x] Apresentar possibilidades de evolução para a Fase 2, condicionadas ao fecho do negócio e às sugestões do cliente.
+- [x] Entregar uma versão pronta para envio ao cliente.
+- [x] Remover linguagem técnica e apresentar as entregas da Fase 1 de forma comercial e simples.
+- [x] Incluir o link público do showroom no documento para revisão do cliente.
+- [x] Entregar a versão revisada do documento comercial.
+- [x] Atualizar o telefone e o e-mail da AFFIANCE.LDA em todas as áreas de contacto.
+- [x] Adicionar links clicáveis de Instagram e Facebook no rodapé e na secção de contactos.
+- [x] Reduzir tipografia e espaçamentos em telas móveis para garantir leitura equilibrada e conteúdo ajustado.
+- [x] Validar a experiência final de contacto e responsividade em desktop e celular.
+- [ ] Unificar o diretório de saída estática para restaurar a publicação integrada sem perder a compatibilidade com Vercel.
+- [x] Validar novamente o build estático no caminho de saída configurado.
+- [ ] Publicar a versão corrigida e validar o carregamento no domínio final.
