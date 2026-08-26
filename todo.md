@@ -36,3 +36,8 @@
 - [x] Registrar a validação visual desktop após a remoção final de tRPC, OAuth e componentes auxiliares.
 - [x] Cobrir a validação local de formulários, favoritos e seleção com testes de front-end.
 - [x] Isolar componentes auxiliares não utilizados que possuem referências a autenticação ou tRPC para preservar a entrega front-end-only.
+- [x] Substituir scripts de servidor por scripts Vite estáticos e remover artefatos de backend da aplicação.
+- [x] Configurar a Vercel para publicar `dist` e redirecionar rotas SPA ao `index.html`.
+- [x] Validar localmente o build de produção estático e as rotas antes da nova implantação.
+- [x] Substituir URLs internas de armazenamento por URLs públicas portáveis para que as fotografias funcionem fora da hospedagem Manus.
+- [x] Testar as rotas `/`, `/404` e uma rota arbitrária contra o preview estático após o build.
