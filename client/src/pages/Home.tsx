@@ -76,6 +76,7 @@ type Product = {
   category: string;
   description: string;
   tag?: string;
+  price?: string;
   image: string;
 };
 
@@ -84,11 +85,17 @@ const products: Product[] = [
   { id: "rack-sala", name: "Rack para sala", category: "Sala de estar", description: "Rack preto com detalhes dourados para uma composição de sala elegante.", tag: "Em destaque", image: ASSETS.rack },
   { id: "sofa-modular", name: "Sofá modular", category: "Sofás", description: "Solução confortável produzida para acompanhar a rotina da sua família.", image: ASSETS.hero },
   { id: "armario-misto", name: "Armário misto", category: "Mobiliário corporativo", description: "Organização segura para documentos e materiais de trabalho.", image: ASSETS.officeCabinet },
+  { id: "cadeira-dourada", name: "Cadeira dourada", category: "Ornamentação", description: "Cadeira de acabamento dourado e assento branco para eventos e decoração.", tag: "Eventos", price: "2.100 Mt", image: "/manus-storage/784433159_122131985961228072_700624867441075710_n_14c57720.jpg" },
+  { id: "cadeira-azul", name: "Cadeira azul", category: "Sala de jantar", description: "Cadeira estofada azul para compor mesas de jantar com personalidade.", tag: "Jantar", price: "6.500 Mt", image: "/manus-storage/784928615_122131985985228072_4073236902438887576_n_7b20f8ca.jpg" },
+  { id: "cadeira-madeira", name: "Cadeira em madeira", category: "Sala de jantar", description: "Cadeira de madeira clara com assento estofado para mesas de jantar.", tag: "Jantar", price: "3.500 Mt", image: "/manus-storage/785258192_122131985967228072_9050566411137331413_n_fe4e78cf.jpg" },
 ];
+
+const chairProducts = products.filter((product) => product.id.startsWith("cadeira-"));
 
 const categories = [
   { name: "Sofás", image: ASSETS.hero, alt: "Família utilizando sofá modular cinza entregue pela AFFIANCE.LDA" },
   { name: "Racks", image: ASSETS.rack, alt: "Rack preto para sala com detalhes dourados" },
+  { name: "Cadeiras", image: "/manus-storage/784928615_122131985985228072_4073236902438887576_n_7b20f8ca.jpg", alt: "Cadeira azul estofada para mesa de jantar" },
   { name: "Arquivadores", image: ASSETS.archiveCabinet, alt: "Arquivador metálico preto para organização de documentos" },
   { name: "Armários", image: ASSETS.metalCabinet, alt: "Armário metálico cinza com portas e prateleiras" },
   { name: "Por medida", image: ASSETS.workshop, alt: "Profissional medindo um sofá durante a execução por medida" },
@@ -214,10 +221,14 @@ export default function Home() {
             {products.map((product) => <article className="product-card" key={product.id}>
               <button className="product-image-button" onClick={() => openProduct(product)} aria-label={`Ver ${product.name}`}><img src={product.image} alt={product.name} />{product.tag && <span className="product-tag">{product.tag}</span>}</button>
               <button className={`fav-button ${favorites.includes(product.id) ? "active" : ""}`} aria-label={`Guardar ${product.name} nos favoritos`} onClick={() => toggleFavorite(product.id)}><Heart size={17} fill={favorites.includes(product.id) ? "currentColor" : "none"} /></button>
-              <div className="product-info"><div><h3>{product.name}</h3><p>{product.category} · Personalizável</p></div><button onClick={() => addToCart(product)}>Adicionar</button></div>
+              <div className="product-info"><div><h3>{product.name}</h3><p>{product.category} · {product.price ?? "Personalizável"}</p></div><button onClick={() => addToCart(product)}>Adicionar</button></div>
             </article>)}
           </div>
         </div>
+      </section>
+
+      <section className="chair-spotlight" id="cadeiras">
+        <div className="site-container"><div className="section-header"><div><p className="kicker">Coleção de cadeiras</p><h2 className="section-title">Uma cadeira para cada <em>ocasião.</em></h2></div><p className="section-copy" style={{maxWidth: "320px", margin: 0}}>Cadeiras reais da AFFIANCE.LDA para ornamentação, mesas de jantar e ambientes que pedem presença.</p></div><div className="chair-grid">{chairProducts.map((product) => <article className="chair-card" key={product.id}><button onClick={() => openProduct(product)}><img src={product.image} alt={product.name} /></button><div><p className="kicker">{product.category}</p><h3>{product.name}</h3><span>{product.price}</span><button className="text-link" onClick={() => openProduct(product)}>Ver detalhes <ArrowRight size={15} /></button></div></article>)}</div></div>
       </section>
 
       <section className="feature-product">

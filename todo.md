@@ -27,3 +27,6 @@
 - [x] Corrigir a coerência entre imagens reais, nomes de produto, descrições e textos alternativos nas secções atualizadas.
 - [x] Revisar a coerência entre imagem, título, descrição e texto alternativo nas categorias, banner, lifestyle, portfólio e galeria real.
 - [x] Criar descrições alternativas específicas para todas as fotografias exibidas na galeria expandida.
+- [x] Adicionar as cadeiras reais ao catálogo de produtos com fotografias, categorias e preços informados.
+- [x] Criar um destaque visual para cadeiras de decoração e cadeiras de jantar na coleção AFFIANCE.LDA.
+- [x] Validar a apresentação das cadeiras em desktop e celular.

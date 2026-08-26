@@ -136,6 +136,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .product-info p { margin: 0; color: #77766e; font-size: .73rem; }
 .product-info button { align-self: center; padding: 0; border: 0; background: transparent; color: #55604e; font-size: .75rem; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
 
+.chair-spotlight { padding: 8rem 0; background: #f5f5f0; }
+.chair-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.chair-card { overflow: hidden; background: #24261f; color: #fffefa; }
+.chair-card > button { display: block; width: 100%; aspect-ratio: 1 / 1.06; padding: 0; border: 0; background: #e7e6df; }
+.chair-card > button img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s cubic-bezier(.23,1,.32,1); }
+.chair-card:hover > button img { transform: scale(1.035); }
+.chair-card > div { padding: 1.25rem 1.3rem 1.45rem; }
+.chair-card .kicker { color: #d3b27c; }
+.chair-card h3 { margin: .5rem 0 .35rem; font: 500 1.65rem/1 "Playfair Display", Georgia, serif; letter-spacing: -.035em; }
+.chair-card span { display: block; color: #e7d8be; font: 500 .85rem "DM Mono", monospace; }
+.chair-card .text-link { margin-top: 1.15rem; border: 0; background: transparent; color: #fffefa; font-size: .77rem; }
+
 .feature-product { display: grid; grid-template-columns: 1.15fr .85fr; background: #24261f; color: #fffefa; }
 .feature-product-media { min-height: 640px; }
 .feature-product-media img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(.68) contrast(.95); }
@@ -293,6 +305,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .category-card:nth-child(n) { grid-column: span 1; }
   .category-card:nth-child(1) { grid-column: span 2; }
   .product-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2.2rem; }
+  .chair-grid { grid-template-columns: repeat(3, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .service:nth-child(3) { border-left: 0; border-top: 1px solid #d3c9b9; }
   .service:nth-child(4) { border-top: 1px solid #d3c9b9; }
@@ -331,6 +344,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .real-gallery-grid { column-count: 2; column-gap: 9px; }
   .real-gallery-card { margin-bottom: 9px; }
   .collection { padding: 5.6rem 0; }
+  .chair-spotlight { padding: 5.6rem 0; }
+  .chair-grid { grid-template-columns: 1fr; }
   .product-grid { gap: 2rem .8rem; }
   .product-info { display: block; }
   .product-info h3 { font-size: 1.1rem; }
